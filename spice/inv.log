@@ -1,0 +1,22 @@
+Warning: vin: no DC value, transient time 0 value used
+
+Circuit: * cmos inverter, generic level-1 models (not sky130)
+
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+
+Initial Transient Solution
+--------------------------
+
+Node                                   Voltage
+----                                   -------
+vdd                                        1.8
+in                                           0
+out                                        1.8
+vin#branch                                   0
+vdd#branch                           -1.81e-12
+
+ Reference value :  4.99500e-09 Reference value :  1.47750e-08 Reference value :  2.45150e-08
+Note: No ".plot", ".print", or ".fourier" lines; no simulations run
+
+No. of Data Rows : 3044

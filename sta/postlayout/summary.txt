@@ -1,0 +1,20 @@
+CORNER                 SETUP_ns      HOLD_ns
+ff_100C_1v65              38.21         0.12
+ff_100C_1v95              38.52         0.05
+ff_n40C_1v56              37.83         0.19
+ff_n40C_1v65              38.08         0.14
+ff_n40C_1v76              38.29         0.09
+ff_n40C_1v95              38.54         0.04
+ss_100C_1v40              34.50         1.06
+ss_100C_1v60              36.16         0.67
+ss_n40C_1v28               7.35         2.34
+ss_n40C_1v35              21.06         1.70
+ss_n40C_1v40              26.88         1.39
+ss_n40C_1v44              30.28         1.20
+ss_n40C_1v60              35.45         0.73
+ss_n40C_1v76              36.65         0.47
+tt_025C_1v80              37.89         0.21
+tt_100C_1v80              37.89         0.21
+
+16 corners | Worst setup: 7.35 ns (ss_n40C_1v28) | Worst hold: 0.04 ns (ff_n40C_1v95)
+RESULT: timing MET in all corners (post-layout, SPEF)

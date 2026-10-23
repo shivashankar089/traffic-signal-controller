@@ -1,0 +1,7 @@
+read_verilog src/traffic_ctrl.v
+synth -top traffic_ctrl -flatten
+dfflibmap -liberty synthesis/sky130_nolpflow.lib
+abc -liberty synthesis/sky130_nolpflow.lib
+clean
+stat -liberty synthesis/sky130_nolpflow.lib
+write_verilog -noattr synthesis/traffic_ctrl_netlist.v

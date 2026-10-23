@@ -1,0 +1,72 @@
+Warning: /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v76.lib line 23, default_fanout_load is 0.0.
+worst slack 37.73
+worst slack 0.09
+Startpoint: _309_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: _310_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.15    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.15    0.00    0.00 ^ _309_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                  0.03    0.25    0.25 ^ _309_/Q (sky130_fd_sc_hd__dfxtp_1)
+     1    0.00                           sync_p[0] (net)
+                  0.03    0.00    0.25 ^ _172_/B_N (sky130_fd_sc_hd__nor2b_1)
+                  0.05    0.08    0.33 ^ _172_/Y (sky130_fd_sc_hd__nor2b_1)
+     1    0.00                           _001_ (net)
+                  0.05    0.00    0.33 ^ _310_/D (sky130_fd_sc_hd__dfxtp_1)
+                                  0.33   data arrival time
+
+                  0.15    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                          0.25    0.25   clock uncertainty
+                          0.00    0.25   clock reconvergence pessimism
+                                  0.25 ^ _310_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                         -0.01    0.24   library hold time
+                                  0.24   data required time
+-----------------------------------------------------------------------------
+                                  0.24   data required time
+                                 -0.33   data arrival time
+-----------------------------------------------------------------------------
+                                  0.09   slack (MET)
+
+
+Startpoint: _331_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: b_red (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.15    0.00    0.00   clock clk (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.15    0.00    0.00 ^ _331_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                  0.15    0.34    0.34 ^ _331_/Q (sky130_fd_sc_hd__dfxtp_1)
+     8    0.02                           state[2] (net)
+                  0.15    0.00    0.34 ^ _159_/B_N (sky130_fd_sc_hd__nor2b_1)
+                  0.12    0.16    0.50 ^ _159_/Y (sky130_fd_sc_hd__nor2b_1)
+     3    0.01                           _142_ (net)
+                  0.12    0.00    0.50 ^ _163_/C_N (sky130_fd_sc_hd__nor3b_1)
+                  1.46    1.15    1.64 ^ _163_/Y (sky130_fd_sc_hd__nor3b_1)
+     4    0.06                           b_yellow (net)
+                  1.46    0.00    1.64 ^ _170_/A (sky130_fd_sc_hd__nor2_1)
+                  0.43    0.37    2.02 v _170_/Y (sky130_fd_sc_hd__nor2_1)
+     1    0.05                           b_red (net)
+                  0.43    0.00    2.02 v b_red (out)
+                                  2.02   data arrival time
+
+                  0.15   50.00   50.00   clock clk (rise edge)
+                          0.00   50.00   clock network delay (ideal)
+                         -0.25   49.75   clock uncertainty
+                          0.00   49.75   clock reconvergence pessimism
+                        -10.00   39.75   output external delay
+                                 39.75   data required time
+-----------------------------------------------------------------------------
+                                 39.75   data required time
+                                 -2.02   data arrival time
+-----------------------------------------------------------------------------
+                                 37.73   slack (MET)
+
+

@@ -1,0 +1,13 @@
+* CMOS inverter, generic level-1 models (not Sky130)
+.model nmod nmos level=1 vto=0.5 kp=200u lambda=0.05
+.model pmod pmos level=1 vto=-0.5 kp=80u lambda=0.05
+Vdd vdd 0 1.8
+Vin in 0 pulse(0 1.8 2n 0.2n 0.2n 4.8n 10n)
+Mp out in vdd vdd pmod w=4u l=0.5u
+Mn out in 0 0 nmod w=2u l=0.5u
+Cl out 0 20f
+.control
+tran 0.01n 30n
+wrdata inv.dat v(in) v(out)
+.endc
+.end

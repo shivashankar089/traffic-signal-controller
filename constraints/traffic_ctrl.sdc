@@ -1,0 +1,7 @@
+create_clock -name clk -period 50 [get_ports clk]
+set_clock_uncertainty 0.25 [get_clocks clk]
+set_clock_transition 0.15 [get_clocks clk]
+set_input_delay 10 -clock clk [get_ports {reset tick ped_req emg_a emg_b timing_sel*}]
+set_output_delay 10 -clock clk [all_outputs]
+set_input_transition 0.2 [get_ports {reset tick ped_req emg_a emg_b timing_sel*}]
+set_load 0.05 [all_outputs]
