@@ -1,4 +1,4 @@
-# Traffic Signal Controller with Emergency-Vehicle Override
+# Traffic Signal Controller with Emergency-Vehicle Override and Pedestrian Crossing
 
 A synthesizable Verilog controller for a two-road junction, implemented with the SkyWater Sky130 HD standard-cell library. It supports a normal traffic-light cycle, emergency-vehicle pre-emption, pedestrian requests, and an all-red safe state.
 
