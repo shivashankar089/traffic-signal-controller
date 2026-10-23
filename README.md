@@ -4,6 +4,12 @@ A synthesizable Verilog controller for a two-road junction, implemented with the
 
 This repository contains the RTL, self-checking simulation, synthesis outputs, timing reports, OpenLane physical-design results, and project evidence. The GDS has passed the reported DRC, LVS, and antenna checks; it has not been submitted for fabrication.
 
+## Problem and approach
+
+A junction controller must coordinate vehicle and pedestrian movements without conflicting signals, respond to emergency requests, and recover predictably from an invalid FSM state. This project demonstrates a synchronous, parameterized FSM for a two-road junction with a pedestrian crossing. It combines a normal signal cycle with emergency pre-emption, queued pedestrian service, and an all-red safe state.
+
+The controller receives digital emergency and pedestrian requests; it does not detect vehicles or pedestrians itself. Sensors or other systems must provide those input signals.
+
 ## Junction
 
 ![Two-road junction diagram](docs/screenshots/01_diagrams/01_junction_diagram.png)
@@ -55,13 +61,27 @@ Default timing parameters, in `tick` pulses: green presets 8, 12, 16, and 20; ye
 
 The RTL contains 29 state and control flip-flops: 4 state bits, two 8-bit timers, 3 pedestrian-control bits, and 6 synchronizer bits.
 
+### Operating sequence and priority
+
+On synchronous reset, the FSM enters `S_SAFE` with both roads red. It remains all-red for the configured interval, then starts Road A green unless an emergency for Road B is active. During normal operation, the sequence is Road A green, yellow, all-red, Road B green, yellow, all-red, then repeat. The phase and minimum-green down-counters advance only when `tick` is high.
+
+An emergency request for the currently green road holds that road green while the request remains active. A request for the other road can end the current green only after the minimum-green counter expires; the controller then uses the yellow and all-red phases before serving the requested road. If both requests are active, Road A has priority. Pedestrian requests are edge-detected and queued until an eligible all-red interval. The walk phase keeps both vehicle roads red, is not interrupted by an emergency, and is followed by the emergency-requested or remembered road as appropriate.
+
+An invalid state decodes to all-red outputs and the next-state logic directs the FSM to `S_SAFE`. This is a fail-safe behavior in the RTL model, not a safety certification.
+
 ## Verification
 
 The self-checking testbench is [`tb/tb_traffic_ctrl.v`](tb/tb_traffic_ctrl.v). Its continuous monitor checks that each road has exactly one active lamp, greens never conflict, and pedestrian walk is only active while both roads are red.
 
-Test scenarios cover reset and restart, the normal cycle, all four green-time presets, emergency requests on either or both roads, pedestrian timing and request retention, emergency arrival during walk, a stuck pedestrian button, timer freezing when `tick` is low, illegal-state recovery, and 20,000 cycles of randomized stimulus.
+Directed scenarios cover reset and restart (including reset during operation), the normal cycle, all four green-time presets, emergency requests on either or both roads, pedestrian timing and request retention during an emergency, an emergency arriving during a walk, a stuck pedestrian button, timer freezing when `tick` is low, and illegal-state recovery. A 20,000-cycle randomized stress phase varies requests, timing selection, `tick`, and reset while the safety monitor continues to run. The testbench prints individual PASS/FAIL checks and ends with `ALL TESTS PASSED` only when it recorded no errors.
 
 Run the simulation as described under [RTL simulation](#rtl-simulation). The project report records `ALL TESTS PASSED`. Example waveforms and simulation evidence are in [`docs/screenshots/02_rtl_and_simulation/`](docs/screenshots/02_rtl_and_simulation/).
+
+Gate-level simulation pass evidence is included in the [synthesis and GLS screenshots](docs/screenshots/03_synthesis_and_gls/). The repository does not include a separate runnable gate-level testbench script, so the documented Icarus command below runs the RTL testbench.
+
+## AI-assisted development
+
+AI tools were used to help draft the RTL and testbench and guide the tool flow. The intended review process is to trace the FSM transitions, run simulation and inspect waveforms, and examine synthesis, timing, DRC, and LVS reports rather than relying on generated code or a single pass message. The simulation and implementation results elsewhere in this README describe the evidence available in this repository; they do not replace independent engineering review or safety certification.
 
 ## Physical-design results
 
