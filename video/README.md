@@ -2,7 +2,7 @@
 
 ## Traffic Signal Controller with Emergency-Vehicle Override and Pedestrian Crossing
 
-This document describes the project walkthrough video for the **Traffic Signal Controller** design. The walkthrough explains the project from its Verilog RTL implementation through simulation, synthesis, static timing analysis (STA), physical implementation, and final verification.
+This document describes the project walkthrough video for the **Traffic Signal Controller with Emergency-Vehicle Override and Pedestrian Crossing** design. The walkthrough explains the project from its Verilog RTL implementation through simulation, synthesis, static timing analysis (STA), physical implementation, and final verification.
 
 The video will be hosted externally on Google Drive. The link and final video details will be added once the recording is uploaded.
 
@@ -10,15 +10,14 @@ The video will be hosted externally on Google Drive. The link and final video de
 
 **Project video:** [Watch the Traffic Signal Controller walkthrough](https://drive.google.com/file/d/1SsYZak6QnmCnjVU_wMS0FXtoJVVbHxV8/view?usp=sharing)
 
-> **Before publishing:** Replace `GOOGLE_DRIVE_VIDEO_LINK_PLACEHOLDER` with the final Google Drive share link. Confirm that the intended audience has permission to view the video.
 
 ## Video Details
 
 | Detail | Information |
 |---|---|
 | Project title | Traffic Signal Controller with Emergency-Vehicle Override and Pedestrian Crossing |
-| Duration | `[ADD FINAL VIDEO DURATION]` |
-| File format | `[ADD VIDEO FORMAT, e.g. MP4]` |
+| Duration | 21 Minutes |
+| File format | MP4 |
 | Hosting platform | Google Drive |
 | Sharing permission | Anyone with the link — Viewer, if appropriate |
 | Project implementation | Verilog RTL and RTL-to-GDSII physical-design workflow |
