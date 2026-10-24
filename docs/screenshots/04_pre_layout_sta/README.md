@@ -12,9 +12,9 @@ These screenshots summarize static timing analysis (STA) before and after physic
 
 ### Post-layout STA
 
-![Post-layout static timing results across 16 corners](20_sta_postlayout_16corners.png)
+![Post-layout static timing results across 16 corners](../06_signoff_and_gds/16_sta_postlayout_16corners.png)
 
-[`20_sta_postlayout_16corners.png`](20_sta_postlayout_16corners.png) presents setup and hold results after layout with parasitics. The checked report records timing met in all 16 corners; the worst setup slack is 7.35 ns and the worst hold slack is 0.04 ns.
+[`16_sta_postlayout_16corners.png`](../06_signoff_and_gds/16_sta_postlayout_16corners.png) presents setup and hold results after layout with parasitics. The checked report records timing met in all 16 corners; the worst setup slack is 7.35 ns and the worst hold slack is 0.04 ns.
 
 ## Related reports
 

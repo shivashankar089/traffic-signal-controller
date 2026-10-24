@@ -8,7 +8,7 @@ This folder contains a standalone ngspice demonstration of a CMOS inverter. It i
 |---|---|
 | [`inv.cir`](inv.cir) | Inverter netlist, generic level-1 NMOS/PMOS models, pulse input, and transient-analysis setup. |
 | [`inv.log`](inv.log) | Captured ngspice run output. |
-| [`22_ngspice_inverter.png`](22_ngspice_inverter.png) | Visual evidence for the inverter example. |
+| [`extra_ngspice_inverter.png`](extra_ngspice_inverter.png) | Visual evidence for the inverter example. |
 
 The netlist uses generic level-1 MOSFET parameters and a 1.8 V supply; it does **not** use the Sky130 PDK and does not model the controller's logic or physical implementation. Treat the image and log as evidence for this example only.
 

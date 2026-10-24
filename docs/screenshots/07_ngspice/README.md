@@ -4,9 +4,9 @@ This section contains a transient-response screenshot for a standalone CMOS inve
 
 ## Image
 
-![Generic-model CMOS inverter transient response](22_ngspice_inverter.png)
+![Generic-model CMOS inverter transient response](extra_ngspice_inverter.png)
 
-[`22_ngspice_inverter.png`](22_ngspice_inverter.png) plots the inverter input and output over time, showing the output switching opposite to the pulsed input.
+[`extra_ngspice_inverter.png`](extra_ngspice_inverter.png) plots the inverter input and output over time, showing the output switching opposite to the pulsed input.
 
 ## Model limitation
 

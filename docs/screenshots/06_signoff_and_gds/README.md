@@ -12,37 +12,37 @@ This section collects screenshots from the completed physical-design flow and it
 
 ### Final layout
 
-![Final GDS layout in Magic](16_final_layout_gds_magic.png)
+![Final GDS layout in Magic](19_final_layout_gds_magic.png)
 
-[`16_final_layout_gds_magic.png`](16_final_layout_gds_magic.png) shows the final GDS layout opened in Magic.
+[`19_final_layout_gds_magic.png`](19_final_layout_gds_magic.png) shows the final GDS layout opened in Magic.
 
-![Zoomed layout cells](17_layout_zoomed_cells.png)
+![Zoomed layout cells](20_layout_zoomed_cells.png)
 
-[`17_layout_zoomed_cells.png`](17_layout_zoomed_cells.png) provides a closer view of cells in the final layout.
+[`20_layout_zoomed_cells.png`](20_layout_zoomed_cells.png) provides a closer view of cells in the final layout.
 
 ### Physical verification
 
-![DRC reports zero violations](18_drc_clean.png)
+![DRC reports zero violations](13_drc_clean.png)
 
-[`18_drc_clean.png`](18_drc_clean.png) shows the Magic design-rule-check (DRC) report with a zero violation count.
+[`13_drc_clean.png`](13_drc_clean.png) shows the Magic design-rule-check (DRC) report with a zero violation count.
 
-![DRC layout view](18a_drc_magic_layout.png)
+![DRC layout view](18_drc_magic_layout.png)
 
-[`18a_drc_magic_layout.png`](18a_drc_magic_layout.png) shows the layout associated with the DRC check.
+[`18_drc_magic_layout.png`](18_drc_magic_layout.png) shows the layout associated with the DRC check.
 
-![LVS reports zero mismatches](19_lvs_clean.png)
+![LVS reports zero mismatches](14_lvs_clean.png)
 
-[`19_lvs_clean.png`](19_lvs_clean.png) shows the layout-versus-schematic (LVS) report with zero reported errors or mismatches.
+[`14_lvs_clean.png`](14_lvs_clean.png) shows the layout-versus-schematic (LVS) report with zero reported errors or mismatches.
 
-![Antenna check reports clean](19b_antenna_clean.png)
+![Antenna check reports clean](15_antenna_clean.png)
 
-[`19b_antenna_clean.png`](19b_antenna_clean.png) shows the antenna-rule check result.
+[`15_antenna_clean.png`](15_antenna_clean.png) shows the antenna-rule check result.
 
 ### Area and timing summary
 
-![Area and timing summary](21_area_and_timing_summary.png)
+![Area and timing summary](17_area_and_timing_summary.png)
 
-[`21_area_and_timing_summary.png`](21_area_and_timing_summary.png) summarizes implementation area and timing metrics for the documented run.
+[`17_area_and_timing_summary.png`](17_area_and_timing_summary.png) summarizes implementation area and timing metrics for the documented run.
 
 ## Related artifacts
 

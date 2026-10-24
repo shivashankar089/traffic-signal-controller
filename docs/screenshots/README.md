@@ -9,7 +9,7 @@ This folder collects visual evidence for the traffic-signal-controller project, 
 | [`01_diagrams/`](01_diagrams/) | Two-road junction and controller state-machine diagrams |
 | [`02_rtl_and_simulation/`](02_rtl_and_simulation/) | RTL view, self-checking simulation results, and GTKWave scenarios |
 | [`03_synthesis_and_gls/`](03_synthesis_and_gls/) | Yosys synthesis, netlist views, and gate-level simulation |
-| [`04_sta_16_corners/`](04_sta_16_corners/) | Pre-layout and post-layout timing across 16 PVT corners |
+| [`04_pre_layout_sta/`](04_pre_layout_sta/) | Pre-layout and post-layout timing across 16 PVT corners |
 | [`05_openlane_stage_by_stage/`](05_openlane_stage_by_stage/) | OpenLane configuration and implementation stages through routing |
 | [`06_signoff_and_gds/`](06_signoff_and_gds/) | Completed flow, final layout, DRC/LVS/antenna checks, and summary |
 | [`07_ngspice/`](07_ngspice/) | Transient response of a standalone CMOS inverter |

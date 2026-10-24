@@ -129,7 +129,7 @@ Worst post-layout setup slack is +7.35 ns at `ss_n40C_1v28`; worst hold slack is
 
 ### Layout and signoff evidence
 
-![Final GDS layout](docs/screenshots/06_signoff_and_gds/16_final_layout_gds_magic.png)
+![Final GDS layout](docs/screenshots/06_signoff_and_gds/19_final_layout_gds_magic.png)
 
 Additional layout, routing, DRC, LVS, antenna, and timing evidence is in [`docs/screenshots/`](docs/screenshots/).
 
