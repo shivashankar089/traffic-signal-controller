@@ -8,7 +8,7 @@ The video will be hosted externally on Google Drive. The link and final video de
 
 ## Watch the Walkthrough
 
-**Project video:** [Watch the Traffic Signal Controller walkthrough](GOOGLE_DRIVE_VIDEO_LINK_PLACEHOLDER)
+**Project video:** [Watch the Traffic Signal Controller walkthrough](https://drive.google.com/file/d/1SsYZak6QnmCnjVU_wMS0FXtoJVVbHxV8/view?usp=sharing)
 
 > **Before publishing:** Replace `GOOGLE_DRIVE_VIDEO_LINK_PLACEHOLDER` with the final Google Drive share link. Confirm that the intended audience has permission to view the video.
 
@@ -231,4 +231,3 @@ Reported simulation, timing, and physical-verification results apply to the docu
 
 The walkthrough follows the design from a synthesizable Verilog FSM to functional simulation, synthesis, pre-layout STA, physical implementation, post-route STA, and physical verification. It demonstrates the relationship between RTL behavior and implementation-level checks, while documenting the constraints and results used for the reported runs.
 
-**Video status:** `[ADD GOOGLE DRIVE LINK AND FINAL VIDEO DETAILS AFTER UPLOADING THE RECORDING]`
