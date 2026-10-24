@@ -143,7 +143,6 @@ Additional layout, routing, DRC, LVS, antenna, and timing evidence is in [`docs/
 | [`synthesis/`](synthesis/) | Yosys scripts, libraries/models, netlists, and synthesis log |
 | [`sta/`](sta/) | Pre-/post-layout timing data, scripts, and PDF reports |
 | [`physical_design/`](physical_design/) | OpenLane configuration, reports, and GDS/LEF/DEF/SPEF/netlist results |
-| [`spice/`](spice/) | Generic-model ngspice inverter example |
 | [`docs/screenshots/`](docs/screenshots/) | Diagrams and evidence by project stage |
 
 ## How to reproduce
@@ -178,7 +177,6 @@ The configuration uses the OpenLane v0.21 path convention `$::env(DESIGN_DIR)/sr
 - The pre-layout STA used an earlier standalone Yosys netlist. OpenLane's synthesis step generated the 201-cell result quoted above.
 - Final signoff numbers and GDS are from the one-command `run1` flow. Stage-by-stage screenshots come from a second run with the same configuration, executed interactively.
 - An initial 10 ns clock target failed setup in 8 of 16 corners; the final clock period was relaxed to 50 ns. The controller's timing behavior is governed by `tick`, not by a need to run the FSM at 20 MHz.
-- The ngspice inverter example uses generic level-1 MOSFET models, not Sky130 models.
 - Some large raw per-corner timing dumps are omitted to keep the repository small; the PDF reports cover all 16 corners.
 - This project is a demonstration design, not a certified traffic-control system.
 
@@ -188,7 +186,7 @@ Adaptive green times from vehicle-count sensors, coordination between neighborin
 
 ## Tools
 
-iVerilog 10.1, GTKWave, Yosys, OpenSTA, OpenLane v0.21 / OpenROAD 0.9.0, Magic 8.3.400, ngspice, and the SkyWater Sky130 PDK. The project flow was run in an Ubuntu 18.04 virtual machine using UTM.
+iVerilog 10.1, GTKWave, Yosys, OpenSTA, OpenLane v0.21 / OpenROAD 0.9.0, Magic 8.3.400, and the SkyWater Sky130 PDK. The project flow was run in an Ubuntu 18.04 virtual machine using UTM.
 
 ## Author
 
